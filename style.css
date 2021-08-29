@@ -8,12 +8,46 @@
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
+
+#hamburger, #cart {
+  cursor: pointer;
+}
+
+#videoBox {
+  position: sticky;
+  top: 0;
+  height: 100vh; 
+  width: 100vw;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.651);
+  display: none;
+}
+  #videoBox iframe {
+    margin: auto;
+    width: 90vw;
+    height: 70vh;
+  }
+  #videoBox i {
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.726);
+    transition: 0.33s;
+    cursor: pointer;
+  }
+    #videoBox i:hover {
+      color: white;
+    }
 
 body {
   margin: auto;
+  /* margin-top: -100vh; */
   flex-direction: column;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
+  overflow-x: hidden;
 }
 header {
   background-image: url("images/bg.jpg");
@@ -70,12 +104,14 @@ header {
     width: 15rem;
     margin: auto;
     margin-top: -2rem;
+    cursor: pointer;
   }
     #playTrailer {
       margin: auto;
       margin-top: 0.5rem;
       font-size: 2.5rem;
       color: rgba(255, 255, 255, 0.801);
+      cursor: pointer;
     }
 nav {
   background-image: url("images/navbar.png");
@@ -313,7 +349,7 @@ footer {
       }
       .featuresInner {
         margin: auto;
-        width: 90%;
+        width: 95%;
       }
         .featuresInner h2 {
           font-size: 2.3rem;
@@ -341,7 +377,7 @@ footer {
       #purchaseInner p {
         width: 100%;
         padding: 0.5rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
       #purchasePoints {
         flex-direction: column;
@@ -376,7 +412,7 @@ footer {
 
     footer {
       flex-direction: column;
-      height: 30rem;
+      height: 35rem;
     }
     footer div {
     margin-left: 0rem;
@@ -435,6 +471,23 @@ footer {
           margin-top: 0.3rem;
           margin-bottom: 0.3rem;
         }
-      
+    
+ 
+      #videoBox iframe {
+        width: 90vw;
+        height: 40vh;
+      }
+      #videoBox i {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
 
+    }
+
+    @media (min-width: 1400px) {
+      #videoBox iframe {
+        width: 60vw;
+        height: 70vh;
+      }
     }

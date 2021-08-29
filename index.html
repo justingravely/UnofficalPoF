@@ -11,49 +11,55 @@
 </head>
 
 <body>
-  <header>
-  <div id="topNav">
-    <img src="images/ANET_POF_Logo.png" alt="Arenanet Logo" id="arenaNetLogo">
-    <div id="topNavLinks">
-      <a href="">FORUMS</a>
-      <p>|</p>
-      <a href="">WIKI</a>
-      <p>|</p>
-      <a href="">SUPPORT</a>
-      <p>|</p>
-      <a href="">ACCOUNT</a>
-      <p></p>
-    </div>
-  </div>
-  <div id="topNavM">
-    <i id="hamburger" class="fas fa-bars"></i>
-    <a href="">
-      <i class="fas fa-shopping-cart"></i>
-    </a>
+  <div id="videoBox">
+    <i id="videoX" class="fas fa-times"></i>
+    <iframe src="https://www.youtube.com/embed/cGZ4X7cER8k" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
   <div id="mobileMenu" style="display: none">
     <img src="images/justText.png" id="mainLogoMenu">
     <div id="mobileFeatures">
-      <a href="">Feature 1</a>
-      <a href="">Feature 2</a>
-      <a href="">Feature 3</a>
+      <a class="mobileF" href="#feature1">Feature 1</a>
+      <a class="mobileF" href="#feature2">Feature 2</a>
+      <a class="mobileF" href="#feature3">Feature 3</a>
     </div>
-    <a href="" id="navPurch">PURCHASE NOW</a>
+    <a class="mobileF" href="#purchase" id="navPurch">PURCHASE NOW</a>
   </div>
-  <img src="images/logo.png" id="mainLogo">
-  <img src="images/justText.png" id="mainLogoM">
-  <img src="images/pofPlay.png" alt="play button for trailer" id="pofPlay">
-  <h2 id="playTrailer">PLAY TRAILER</h2>
-</header>
+  <header>
+    <div id="topNav">
+      <img src="images/ANET_POF_Logo.png" alt="Arenanet Logo" id="arenaNetLogo">
+      <div id="topNavLinks">
+        <a>FORUMS</a>
+        <p>|</p>
+        <a>WIKI</a>
+        <p>|</p>
+        <a>SUPPORT</a>
+        <p>|</p>
+        <a>ACCOUNT</a>
+        <p></p>
+      </div>
+    </div>
+    <div id="topNavM">
+      <i id="hamburger" class="fas fa-bars"></i>
+      <a href="#purchase">
+        <i id="cart" class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+    <img src="images/logo.png" id="mainLogo">
+    <img src="images/justText.png" id="mainLogoM">
+    <img src="images/pofPlay.png" alt="play button for trailer" id="pofPlay">
+    <h2 id="playTrailer">PLAY TRAILER</h2>
+  </header>
   <nav>
     <div class="navLinks">
       <img src="images/justText.png" id="logo2">
       <div id="navLinksFeatures">
-        <a href="">Feature 1</a>
-        <a href="">Feature 2</a>
-        <a href="">Feature 3</a>
+        <a href="#feature1">Feature 1</a>
+        <a href="#feature2">Feature 2</a>
+        <a href="#feature3">Feature 3</a>
       </div>
-      <a href="" id="navPurch">PURCHASE NOW</a>
+      <a href="#purchase" id="navPurch">PURCHASE NOW</a>
     </div>
   </nav>
   <div id="feature1" class="features">
@@ -84,33 +90,33 @@
     </div>
   </div>
   <div class="bottomWrap">
-  <div id="purchase" class="features">
-    <img src="images/boxArt.png" alt="GW2 PoF Box Art" id="boxArt">
-    <div id="purchaseInner">
-      <h3 id="price">$29.99</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe animi a neque deserunt facilis nihil
-        magni commodi minima? Accusantium ut itaque a perspiciatis odio, numquam unde quos cum iusto.</p>
-      <div id="purchasePoints">
-        <ul>
-          <li><span>+</span>Lorem, ipsum. sapsos combrago</li>
-          <li><span>+</span>Lorem, ipsum. sapsos</li>
-          <li><span>+</span>Lorem, ipsum. saps</li>
-        </ul>
-        <ul>
-          <li><span>+</span>Lorem, ipsum. sapsos combrago</li>
-          <li><span>+</span>Lorem, ipsum. sapsos</li>
-          <li><span>+</span>Lorem, ipsum. </li>
-        </ul>
+    <div id="purchase" class="features">
+      <img src="images/boxArt.png" alt="GW2 PoF Box Art" id="boxArt">
+      <div id="purchaseInner">
+        <h3 id="price">$29.99</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe animi a neque deserunt facilis nihil
+          magni commodi minima? Accusantium ut itaque a perspiciatis odio, numquam unde quos cum iusto.</p>
+        <div id="purchasePoints">
+          <ul>
+            <li><span>+</span>Lorem, ipsum. sapsos combrago</li>
+            <li><span>+</span>Lorem, ipsum. sapsos</li>
+            <li><span>+</span>Lorem, ipsum. saps</li>
+          </ul>
+          <ul>
+            <li><span>+</span>Lorem, ipsum. sapsos combrago</li>
+            <li><span>+</span>Lorem, ipsum. sapsos</li>
+            <li><span>+</span>Lorem, ipsum. </li>
+          </ul>
+        </div>
+        <a href="#purchase" id="navPurch">PURCHASE NOW</a>
       </div>
-      <a href="" id="navPurch">PURCHASE NOW</a>
     </div>
   </div>
-</div>
   <footer>
     <div>
       <div id="footerLegal">
-        <a href="">PRIVACY POLICY</a>
-        <p>|</p> <a href="">LEGAL DOCUMENTATION</a>
+        <a>PRIVACY POLICY</a>
+        <p>|</p> <a>LEGAL DOCUMENTATION</a>
       </div>
       <p>©2021 ArenaNet, LLC. All rights reserved. All trademarks are the property of their respective owners.</p>
     </div>
@@ -120,9 +126,19 @@
 
 <script>
   // mobile menu
+  var cart = document.getElementById("cart");
   var hamburger = document.getElementById("hamburger");
   var mobileMenu = document.getElementById("mobileMenu");
-  hamburger.addEventListener("click", function() {
+  var mobileF = document.getElementsByClassName("mobileF");
+  for (let i = 0; i < mobileF.length; i++) {
+    mobileF[i].addEventListener("click", function () {
+      hamburgerFun(false);
+    })
+  }
+  cart.addEventListener("click", function() {
+    hamburgerFun(false);
+  })
+  hamburger.addEventListener("click", function () {
     if (mobileMenu.style.display == "none") {
       hamburgerFun(true)
     } else if (mobileMenu.style.display == "flex") {
@@ -134,8 +150,35 @@
       mobileMenu.style.display = "flex";
     } else if (bool == false) {
       mobileMenu.style.display = "none";
+    } 
+  }
+  // video box
+  var videoBox = document.getElementById("videoBox");
+  var videoX = document.getElementById("videoX");
+  var body = document.body;
+  var playTrailer = document.getElementById("playTrailer");
+  var pofPlay = document.getElementById("pofPlay");
+  var playArr = [playTrailer, pofPlay];
+  var closeArr = [videoBox, videoX];
+  for (let i = 0; i < playArr.length; i++) {
+    playArr[i].addEventListener("click", function () {
+      playFun(true);
+    })
+    closeArr[i].addEventListener("click", function () {
+      playFun(false);
+    })
+  }
+  function playFun(bool) {
+    if (bool == true) {
+      body.style.marginTop = "-100vh";
+      videoBox.style.display = "flex";
+    } else if (bool == false) {
+      body.style.marginTop = "auto";
+      videoBox.style.display = "none";
     }
   }
+
+
 </script>
 
 </html>
