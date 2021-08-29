@@ -195,10 +195,53 @@ nav {
   }
   #feature2 {
     background-image: url("images/featurebg2.jpg");
+    height: 80rem;
   }
+    #feature2 .featuresInner h1, .featuresInner p, .featuresInner h2 {
+      margin-bottom: 0;
+    }
+      #feature2 h1 {
+        margin-top: 10rem;
+        padding-bottom: 2rem;
+      }
   #feature3 {
     background-image: url("images/featurebg3.jpg");
   }
+    #slideShow {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+      #imgBox {
+        width: 690px;
+        height: 388px;
+        background-image: url("images/ss1.jpg");
+        background-size: contain;
+        margin: auto;
+      }
+    #ssNav {
+      display: flex;
+      width: 18rem;
+      margin: auto;
+      margin-top: 1rem;
+    }
+      .ssBox, #ssNav i {
+        margin: auto;
+      }
+        #ssNav i {
+          font-size: 3rem;
+          cursor: pointer;
+        }
+      .ssBox {
+        width: 2rem;
+        height: 2rem;
+        border: 3px solid rgb(197, 0, 197);
+        cursor: pointer;
+      }
+        #ssBox1 {
+          background-color: white;
+          box-shadow: 0px 0px 10px white;
+        }
 
 #purchase {
   margin: auto;
@@ -344,9 +387,6 @@ footer {
             font-size: 1.5rem;
             padding: 0.7rem 2rem;
           }
-      .features {
-        height: 40rem;
-      }
       .featuresInner {
         margin: auto;
         width: 95%;
@@ -489,5 +529,24 @@ footer {
       #videoBox iframe {
         width: 60vw;
         height: 70vh;
+      }
+    }
+
+    @media (max-width: 750px) {
+      #imgBox {
+        width: 500px;
+        height: 281.25px;
+      }
+    }
+    @media (max-width: 539px) {
+      #imgBox {
+        width: 350px;
+        height: 196.88px;
+      }
+    }
+    @media (max-width: 395px) {
+      #imgBox {
+        width: 310px;
+        height: 174.38px;
       }
     }

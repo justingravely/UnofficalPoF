@@ -75,9 +75,17 @@
     <div class="featuresInner">
       <h1>Feature 2</h1>
       <h2>THIS IS FEATURE TWO</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium repudiandae tempora maxime eum quisquam id
-        perspiciatis nostrum amet ratione, eveniet autem quis repellat error explicabo sint possimus ipsa asperiores
-        obcaecati, magnam debitis excepturi nemo fuga dolore! Aliquid libero sapiente sequi!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, reiciendis.</p>
+      <div id="slideShow">
+        <div id="imgBox"></div>
+        <div id="ssNav">
+          <i id="ssLeft" class="fas fa-chevron-left"></i>
+          <div id="ssBox1" class="ssBox"></div>
+          <div id="ssBox2" class="ssBox"></div>
+          <div id="ssBox3" class="ssBox"></div>
+          <i id="ssRight" class="fas fa-chevron-right"></i>
+        </div>
+      </div>
     </div>
   </div>
   <div id="feature3" class="features">
@@ -135,7 +143,7 @@
       hamburgerFun(false);
     })
   }
-  cart.addEventListener("click", function() {
+  cart.addEventListener("click", function () {
     hamburgerFun(false);
   })
   hamburger.addEventListener("click", function () {
@@ -150,7 +158,7 @@
       mobileMenu.style.display = "flex";
     } else if (bool == false) {
       mobileMenu.style.display = "none";
-    } 
+    }
   }
   // video box
   var videoBox = document.getElementById("videoBox");
@@ -161,10 +169,10 @@
   var playArr = [playTrailer, pofPlay];
   var closeArr = [videoBox, videoX];
   for (let i = 0; i < playArr.length; i++) {
-    playArr[i].addEventListener("click", function () {
+    playArr[i].addEventListener("click", () => {
       playFun(true);
     })
-    closeArr[i].addEventListener("click", function () {
+    closeArr[i].addEventListener("click", () => {
       playFun(false);
     })
   }
@@ -176,6 +184,72 @@
       body.style.marginTop = "auto";
       videoBox.style.display = "none";
     }
+  }
+  //slideshow
+  var imgBox = document.getElementById("imgBox");
+  var ssLeft = document.getElementById("ssLeft");
+  var ssRight = document.getElementById("ssRight");
+  var ssBox1 = document.getElementById("ssBox1");
+  var ssBox2 = document.getElementById("ssBox2");
+  var ssBox3 = document.getElementById("ssBox3");
+  var ssStuff = [ssLeft, ssRight, ssBox1, ssBox2, ssBox3]
+  var curBox = 1;
+  for (let i = 0; i < ssStuff.length; i++) {
+    ssStuff[i].addEventListener("click", () => {
+      ssFun(i);
+    })
+  }
+
+  var defaultBox = 2;
+  function ssFun(num) {
+    switch (num) {
+      case 0:
+        if (curBox != 1) {
+          curBox -= 1;
+          ssNavFun(defaultBox, "l");
+        }
+        break;
+      case 1:
+        if (curBox != 3) {
+          curBox += 1;
+          ssNavFun(defaultBox, "r")
+        }
+        break;
+      case 2:
+        curBox = 1;
+        ssNavFun(2);
+        break;
+      case 3:
+        curBox = 2;
+        ssNavFun(3);
+        break;
+      case 4:
+        curBox = 3;
+        ssNavFun(4);
+        break;
+    }
+    function ssNavFun(x, lr) {
+      if (lr == "l") {
+        x -= 1;
+      } else if (lr == "r") {
+        x += 1;
+      }
+      for (let i = 2; i <= 4; i++) {
+        if (i !== x) {
+          ssStuff[i].style.backgroundColor = "rgba(255, 255, 255, 0)";
+          ssStuff[i].style.boxShadow = "0px 0px 10px rgba(255, 255, 255, 0)";
+        } else if (i == x) {
+          ssStuff[i].style.backgroundColor = "white";
+          ssStuff[i].style.boxShadow = "0px 0px 10px white";
+        }
+      }
+      defaultBox = x;
+    }
+
+
+    // if (curBox < 1) curBox = 1;
+    // if (curBox > 3) curBox = 3;
+    imgBox.style.backgroundImage = `url("images/ss` + curBox.toString() + `.jpg")`;
   }
 
 
